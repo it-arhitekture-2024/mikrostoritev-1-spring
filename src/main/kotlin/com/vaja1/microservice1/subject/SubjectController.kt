@@ -31,13 +31,13 @@ class SubjectController(private val subjectService: SubjectService) {
         return subjectService.insertSubject(subject)
     }
 
-    @PutMapping
-    fun updateSubject(@RequestBody subjectId: String, @RequestBody updatedSubject: Subject): Subject {
+    @PutMapping("/{subjectId}")
+    fun updateSubject(@PathVariable subjectId: String, @RequestBody updatedSubject: Subject): Subject {
         return subjectService.updateSubject(subjectId, updatedSubject)
     }
 
-    @DeleteMapping
-    fun deleteSubject(@RequestBody subjectId: String) {
-        return subjectService.deleteSubject(subjectId)
+    @DeleteMapping("/{subjectId}")
+    fun deleteSubject(@PathVariable subjectId: String) {
+        subjectService.deleteSubject(subjectId)
     }
 }
