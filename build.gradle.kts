@@ -54,3 +54,10 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.jar {
+    archiveBaseName.set("microservice1")
+    manifest {
+        attributes["Main-Class"] = "/com/vaja1/microservice1/Microservice1Application.kt"
+    }
+}

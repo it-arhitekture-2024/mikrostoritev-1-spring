@@ -39,3 +39,6 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+Dockerfile
+docker-compose.yml
