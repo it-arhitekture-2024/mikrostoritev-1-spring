@@ -3,7 +3,7 @@ package com.vaja1.microservice1.subject
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
-@Document(collection = "subjects")
+@Document(collection = "Subject")
 data class Subject(
     @Id
     val id: String? = null,
